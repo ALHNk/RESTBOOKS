@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path');
 const cors = require('cors');
-const port = 8069;
+const port = process.env.PORT || 8069;
 const bookRouter = require('./routers/BookRouter')
 const authorAPI = require('./routers/AuthorAPI')
 
@@ -16,4 +16,4 @@ app.use(express.json());
 app.use('/books', bookRouter);
 app.use('/api', authorAPI);
 
-app.listen(port);
+app.listen(port,() => console.log(`Server running on port ${port}`));

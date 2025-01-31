@@ -105,7 +105,7 @@ async function send() {
     }
 
     try{            
-        let res  = await fetch('http://localhost:8069/books/post', {
+        let res  = await fetch('/books/post', {
             method: 'POST',
             headers: {  
                 'Content-Type': 'application/json'
