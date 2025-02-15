@@ -98,7 +98,7 @@
         
         if (newTitle && newAuthor && newYear && newGenre) {
             try {
-                let response = await fetch(`/books/delete/${bookId}`, {
+                let response = await fetch(`/books/put/${bookId}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

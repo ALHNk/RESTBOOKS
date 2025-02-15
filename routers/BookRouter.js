@@ -65,7 +65,6 @@ router.put('/put/:id', async (req, res) =>
     //     return res.status(400).json({message:'Year must be a valid number'});
     // }
 
-    console.log(id);
     try{
         let isListUpdated = await bookController.update(id, book);
         if(isListUpdated == -1)

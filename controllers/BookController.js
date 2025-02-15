@@ -27,7 +27,7 @@ class BookController
     {
         id = Number(id);
         
-        if(id > this.books.length || id < 1)
+        if(id > this.books.length + 1 || id < 1)
         {
             return -1;
         }
@@ -37,7 +37,7 @@ class BookController
     async delete(id)
     {
         id = Number(id);
-        if(id >= this.books.length || id < 1)
+        if(id >= this.books.length +1 || id < 1)
         {
             return -1;
         }
